@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from home.models import *
 from .forms import *
 from .functions import *
+from django.core.mail import send_mail
 # Create your views here.
 
 def home_page(request):
@@ -23,7 +24,18 @@ def home_page(request):
 			d = Contact(user_name=user_name, user_phone=user_phone, user_email=user_email, user_details=user_details)
 			d.save()
 
-			return HttpResponse('<div class="alert alert-success"> Your Form Submit successfully </div>')
+			#return HttpResponse('<div class="alert alert-success"> Your Form Submit successfully </div>')
+
+			send_mail(
+                'ContactForm',
+                'Someone just submitted Contact form on the website! Details are as follows' +
+    ': user_name: {} '.format(user_name),
+                 settings.EMAIL_HOST_USER,
+                 settings.ADMINS,
+                 fail_silently=False,
+                )
+
+
 	
 	contact_form = ContactForm()
 
