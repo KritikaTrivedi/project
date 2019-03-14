@@ -1,0 +1,22 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Tue 2019-03-12 11:46:06 IST; 6h ago
+ Main PID: 3955 (gunicorn)
+    Tasks: 4 (limit: 2117)
+   Memory: 130.9M
+   CGroup: /system.slice/gunicorn.service
+           ├─ 3955 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/python2 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock m_app.wsgi:application
+           ├─12781 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/python2 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock m_app.wsgi:application
+           ├─12783 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/python2 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock m_app.wsgi:application
+           └─12792 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/python2 /home/webllisto/workspace/webllisto_mezzanine_project/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock m_app.wsgi:application
+
+Mar 12 11:49:30 webllisto-pc gunicorn[3955]:  - - [12/Mar/2019:07:19:29 +0100] "GET /8000/first/ajkl/ HTTP/1.0" 404 1699 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0"
+Mar 12 11:49:32 webllisto-pc gunicorn[3955]: Not Found: /8000/first/ajkl/
+Mar 12 11:49:32 webllisto-pc gunicorn[3955]:  - - [12/Mar/2019:07:19:32 +0100] "GET /8000/first/ajkl/ HTTP/1.0" 404 1699 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0"
+Mar 12 13:35:08 webllisto-pc gunicorn[3955]: Not Found: /8000/first/ajkl/
+Mar 12 18:27:41 webllisto-pc gunicorn[3955]: [2019-03-12 18:27:38 +0000] [3955] [CRITICAL] WORKER TIMEOUT (pid:4006)
+Mar 12 18:27:49 webllisto-pc gunicorn[3955]: [2019-03-12 18:27:49 +0000] [12781] [INFO] Booting worker with pid: 12781
+Mar 12 18:27:55 webllisto-pc gunicorn[3955]: [2019-03-12 18:27:55 +0000] [3955] [CRITICAL] WORKER TIMEOUT (pid:4005)
+Mar 12 18:27:56 webllisto-pc gunicorn[3955]: [2019-03-12 18:27:56 +0000] [12783] [INFO] Booting worker with pid: 12783
+Mar 12 18:28:06 webllisto-pc gunicorn[3955]: [2019-03-12 18:28:02 +0000] [3955] [CRITICAL] WORKER TIMEOUT (pid:4003)
+Mar 12 18:28:06 webllisto-pc gunicorn[3955]: [2019-03-12 18:28:03 +0000] [12792] [INFO] Booting worker with pid: 12792

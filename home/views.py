@@ -24,7 +24,7 @@ def home_page(request):
 			d = Contact(user_name=user_name, user_phone=user_phone, user_email=user_email, user_details=user_details)
 			d.save()
 
-			#return HttpResponse('<div class="alert alert-success"> Your Form Submit successfully </div>')
+			#return HttpResponse('<div class="toast alert-success"> Your Form Submit successfully </div>')
 
 			send_mail(
                 'ContactForm',
@@ -35,7 +35,7 @@ def home_page(request):
                  fail_silently=False,
                 )
 
-
+     
 	
 	contact_form = ContactForm()
 

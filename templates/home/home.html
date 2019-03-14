@@ -165,9 +165,6 @@ Our proven creative graphic design services speak of your brand, thus establishi
 <<<<<<< HEAD
 Realize your vision for your next design with a digital platform that’s built to perform.
 </p>
-=======
-Realize your vision for your next design with a digital platform that’s built to perform.</p>
->>>>>>> 68a1024749a3df5922e3e2dab25058ecf7deae86
                             <a href="#" class="view_more_link view_service_details">Work</a>
                         </div>
                     </div>
@@ -181,9 +178,6 @@ Realize your vision for your next design with a digital platform that’s built 
 Bitcoin showed us a glimpse of a world without banks and financial institutions.
 We work with blockchain to provide our customers with more security and new technology.
 </p>
-=======
-We work with blockchain to provide our customers with more security and new technology.</p>
->>>>>>> 68a1024749a3df5922e3e2dab25058ecf7deae86
                             <a href="#" class="view_more_link view_service_details">Work</a>
                         </div>
                     </div>
@@ -884,8 +878,28 @@ Mauris in erat justo.</p>
                     <div class="form-group">
                         {{contact.user_details}}
                     </div>
-                    <button type="submit" class="btn-primary btn btn-orange">To Send</button>
+                   
+                    <button type="submit" class="btn-primary btn btn-orange" id="myBtn">To Send</button>
+
+                    <div class="toast" role="alert" aria-live="assertive"aria-atomic="true"autohide=false>
+                    <div class="toast-header">
+                        Success
                     </div>
+   
+                    <div class="toast-body">
+                        Thanks for Contatcting Us. We will get to you shortly! 
+                    </div>
+                    </div>
+                    </div>
+
+                    <script>
+                        $(document).ready(function(){
+                            $("#myBtn").click(function(){
+                                $('.toast').toast('show');
+                            });
+                        });
+                    </script>
+
                 </form> 
         </div>
       </div>
